@@ -1,0 +1,20 @@
+{% load static %}
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Gugi&display=swap&subset=korean" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap&subset=korean" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap&subset=korean" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href = "{% static 'css/blog.css' %}">
+</head>
+
+<body>
+    <h1><strong>내가 낙서장이라니!! 내가 낙서장이라니!!ㅠㅠㅠㅠ</strong></h1>
+    <img src = {% static 'img/dangdange.PNG' %} height="300px" alt="">
+    <div>
+        <a href = "{% url 'new' %}">글새? 아니 나는 새글이야! 깔깔</a>
+        <a href = "{% url 'home' %}">집가자 빨래도 밀렸어ㅠㅠ</a>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>

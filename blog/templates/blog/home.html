@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<body>
+    <h1>안녕 나는 너의 낙서장이야!</h1>
+    {% for post in posts.all %}
+        <div>
+            <h2><a href = "{% url 'detail' post.id %}">{{post.title}}</a></h2>
+            <p>{{post.created_date}}</p>
+            <p>{{post.text}}</p>
+        </div>
+    {% endfor %}
+</body>
+
+{% endblock %}
